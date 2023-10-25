@@ -9,7 +9,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 	providedIn: 'root',
 })
 export class TimezoneService {
-	private static BASE_TIMEZONE_API_URL = 'http://worldtimeapi.org/api/';
+	private static BASE_TIMEZONE_API_URL = 'https://worldtimeapi.org/api/';
 
 	private timezonesNames$: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
 	private timezonesWithData$: BehaviorSubject<Timezone[]> = new BehaviorSubject<Timezone[]>([]);
