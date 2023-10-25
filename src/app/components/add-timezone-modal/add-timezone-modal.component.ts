@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
-import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { ModalService } from 'src/app/services/modal.service';
-import { TimezoneService } from 'src/app/services/timezone.service';
+import { LocalStorageService } from './../../services/local-storage.service';
+import { ModalService } from './../../services/modal.service';
+import { TimezoneService } from './../../services/timezone.service';
 
 @Component({
 	selector: 'app-add-timezone-modal',

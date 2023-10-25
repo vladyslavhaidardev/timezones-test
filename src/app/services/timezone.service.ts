@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, forkJoin, Observable, of } from 'rxjs';
 
-import { Timezone } from 'src/app/interfaces/timezone.interface';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { Timezone } from './../interfaces/timezone.interface';
+import { LocalStorageService } from './local-storage.service';
 
 @Injectable({
 	providedIn: 'root',

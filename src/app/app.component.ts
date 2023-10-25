@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { LocalStorageService } from './../app/services/local-storage.service';
 
 @Component({
   selector: 'app-root',

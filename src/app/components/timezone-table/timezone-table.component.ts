@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Observable, Subject, takeUntil } from 'rxjs';
 
-import { Timezone } from 'src/app/interfaces/timezone.interface';
-import { ModalService } from 'src/app/services/modal.service';
-import { TableService } from 'src/app/services/table.service';
-import { TimezoneService } from 'src/app/services/timezone.service';
+import { Timezone } from './../../interfaces/timezone.interface';
+import { ModalService } from './../../services/modal.service';
+import { TableService } from './../../services/table.service';
+import { TimezoneService } from './../../services/timezone.service';
 
 @Component({
 	selector: 'app-timezone-table',
