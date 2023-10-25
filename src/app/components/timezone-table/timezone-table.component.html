@@ -1,0 +1,28 @@
+<button class="button" (click)="openModal()">{{ addButtonText }}</button>
+<table class="table">
+    <thead>
+    <tr>
+        <th class="column" *ngFor="let column of columns">{{ column }}</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let timezone of timezonesWithData$ | async">
+        <td class="cell">{{ timezone.timezone }}</td>
+        <td class="cell">{{ timezone.abbreviation }} (UTC{{ timezone.utc_offset }})</td>
+        <td class="cell">{{ timezone.datetime | date:'HH:mm:ss': 'UTC' + timezone.utc_offset }}</td>
+        <td class="cell">{{ timezone.datetime | date:'dd-MM-yyyy' }}</td>
+        <td class="cell">{{timezone.dst
+          ? (timezone.dst_from | date: 'dd-MM-yyyy') + ' -> ' + (timezone.dst_until | date: 'dd-MM-yyyy')
+          : 'Inactive'
+            }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<app-add-timezone-modal *ngIf="isModalOpen$ | async"></app-add-timezone-modal>
+
+
+
+
+

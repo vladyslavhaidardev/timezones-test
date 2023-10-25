@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  opacity: 0.8;
+  transform: none;
+}

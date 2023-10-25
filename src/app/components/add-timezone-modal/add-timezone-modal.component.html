@@ -1,0 +1,19 @@
+<div class="backdrop" (click)="closeModal($event)">
+    <div class="body">
+        <h2 class="title">{{ title }}</h2>
+        <select class="select" [formControl]="timezoneControl">
+            <option value="" disabled selected>{{ defaultOptionText }}</option>
+            <option *ngFor="let timezoneName of timezonesNames$ | async">{{ timezoneName }}</option>
+        </select>
+        <div class="validation-error" *ngIf="timezoneControl.invalid">{{ errorMessage }}</div>
+        <div class="buttons">
+            <button
+                class="button button_add"
+                (click)="addTimezone()"
+                [disabled]="timezoneControl.invalid"
+            >{{ addButtonText }}
+            </button>
+            <button class="button button_cancel" (click)="closeModal($event)">{{ cancelButtonText }}</button>
+        </div>
+    </div>
+</div>
